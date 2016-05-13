@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>photoset3-0</string>
+		<string>photoset3-1</string>
+		<string>photoset3-2</string>
+		<string>photoset3-3</string>
+		<string>photoset3-4</string>
+		<string>photoset3-5</string>
+		<string>photoset3-6</string>
+	</array>
+	<array>
+		<string>photoset4-0</string>
+		<string>photoset4-1</string>
+		<string>photoset4-2</string>
+		<string>photoset4-3</string>
+	</array>
+	<array>
+		<string>photoset6-0</string>
+		<string>photoset6-1</string>
+		<string>photoset6-2</string>
+		<string>photoset6-3</string>
+		<string>photoset6-4</string>
+		<string>photoset6-5</string>
+	</array>
+</array>
+</plist>
