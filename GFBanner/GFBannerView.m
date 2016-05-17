@@ -27,7 +27,7 @@
 
 @implementation GFBannerView
 
-NSString *const kCellIdentifier = @"cell";
+static NSString *const kCellIdentifier = @"cell";
 
 
 #pragma mark - Lifecyle
@@ -105,7 +105,7 @@ NSString *const kCellIdentifier = @"cell";
 
 - (void)initPageControl {
     
-    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, kSelfHeight - 22, kSelfWidth, 15)];
+    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, kSelfHeight - 22.0, kSelfWidth, 15.0)];
     _pageControl.numberOfPages = _imageCount;
     
     [_pageControl addTarget:self action:@selector(tapToChangePageAction:) forControlEvents:UIControlEventValueChanged];

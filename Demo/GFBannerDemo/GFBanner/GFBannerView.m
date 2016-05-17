@@ -27,7 +27,7 @@
 
 @implementation GFBannerView
 
-NSString *const kCellIdentifier = @"cell";
+static NSString *const kCellIdentifier = @"cell";
 
 
 #pragma mark - Lifecyle
