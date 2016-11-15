@@ -53,12 +53,12 @@ static NSString *const kCellIdentifier = @"cell";
         _playTimeInterval = 4.0; // 默认支持轮播，轮播间隔时长为 4s
         
         
-        [self initFirstSubview];
+        [self setupFirstSubview];
         
-        // 初始化
-        [self initCollectionView];
-        [self initPageControl];
-        [self initTimer];
+        // 初始化设置
+        [self setupCollectionView];
+        [self setupPageControl];
+        [self setupTimer];
         
         
         _currentPage = 1;
@@ -71,14 +71,17 @@ static NSString *const kCellIdentifier = @"cell";
     return self;
 }
 
-- (void)initFirstSubview {
+
+#pragma mark - Set up
+
+- (void)setupFirstSubview {
     // 添加这个view，使得 collectionView 不是第一个子视图，这样就可以解决iOS7之后 automaticallyAdjustsScrollViewInsets 引发的问题。
     UIView *firstSubview = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 0.1, 0.1)];
     [self addSubview:firstSubview];
 }
 
 
-- (void)initCollectionView {
+- (void)setupCollectionView {
     
     CGRect frame = CGRectMake(0, 0, kSelfWidth, kSelfHeight);
     
@@ -97,13 +100,14 @@ static NSString *const kCellIdentifier = @"cell";
     _collectionView.showsHorizontalScrollIndicator = NO;
     _collectionView.showsVerticalScrollIndicator = NO;
     _collectionView.backgroundColor = [UIColor whiteColor];
+    _collectionView.bounces = NO;
     
     [_collectionView registerClass: [GFBannerCell class] forCellWithReuseIdentifier:kCellIdentifier];
     
     [self addSubview:_collectionView];
 }
 
-- (void)initPageControl {
+- (void)setupPageControl {
     
     _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, kSelfHeight - 22.0, kSelfWidth, 15.0)];
     _pageControl.numberOfPages = _imageCount;
@@ -113,7 +117,7 @@ static NSString *const kCellIdentifier = @"cell";
     [self addSubview:_pageControl];
 }
 
-- (void)initTimer {
+- (void)setupTimer {
     
         _timer = [NSTimer scheduledTimerWithTimeInterval:_playTimeInterval target:self selector:@selector(autoChangePageAction:) userInfo:nil repeats:YES];
 
@@ -136,7 +140,7 @@ static NSString *const kCellIdentifier = @"cell";
 
 - (void)enableAutoPlay {
     if (!_timer) {
-        [self initTimer];
+        [self setupTimer];
     }
 }
 
