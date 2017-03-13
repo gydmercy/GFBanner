@@ -7,6 +7,7 @@
 
 #import "GFBannerView.h"
 #import "GFBannerCell.h"
+#import "NSTimer+GFBlockSupport.h"
 
 #define kSelfWidth self.frame.size.width
 #define kSelfHeight self.frame.size.height
@@ -35,7 +36,6 @@ static NSString *const kCellIdentifier = @"cell";
 - (void)dealloc {
     // 当前对象销毁前，移除定时器，防止循环引用
     [self disableAutoPlay];
-    
 }
 
 
@@ -119,7 +119,11 @@ static NSString *const kCellIdentifier = @"cell";
 
 - (void)setupTimer {
     
-        _timer = [NSTimer scheduledTimerWithTimeInterval:_playTimeInterval target:self selector:@selector(autoChangePageAction:) userInfo:nil repeats:YES];
+    __weak typeof(self) weakSelf = self;
+    _timer = [NSTimer gf_scheduledTimerWithTimeInterval:_playTimeInterval block:^{
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf autoChangePageAction];
+    } repeats:YES];
 
 }
 
@@ -162,7 +166,7 @@ static NSString *const kCellIdentifier = @"cell";
 
 }
 
-- (void)autoChangePageAction:(id)sender {
+- (void)autoChangePageAction {
     
     _currentPage += 1;
     _pageControl.currentPage = _currentPage - 1;

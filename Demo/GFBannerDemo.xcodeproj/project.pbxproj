@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		483E8E471E768DFF007468E5 /* NSTimer+GFBlockSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 483E8E461E768DFF007468E5 /* NSTimer+GFBlockSupport.m */; };
 		4880D99C1CE5FA9800B394CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4880D99B1CE5FA9800B394CA /* main.m */; };
 		4880D99F1CE5FA9800B394CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4880D99E1CE5FA9800B394CA /* AppDelegate.m */; };
 		4880D9A21CE5FA9800B394CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4880D9A11CE5FA9800B394CA /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		483E8E451E768DFF007468E5 /* NSTimer+GFBlockSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+GFBlockSupport.h"; sourceTree = "<group>"; };
+		483E8E461E768DFF007468E5 /* NSTimer+GFBlockSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+GFBlockSupport.m"; sourceTree = "<group>"; };
 		4880D9971CE5FA9800B394CA /* GFBannerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GFBannerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4880D99B1CE5FA9800B394CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4880D99D1CE5FA9800B394CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				4880D9B61CE5FB0500B394CA /* GFBannerView.m */,
 				4880D9B31CE5FB0500B394CA /* GFBannerCell.h */,
 				4880D9B41CE5FB0500B394CA /* GFBannerCell.m */,
+				483E8E451E768DFF007468E5 /* NSTimer+GFBlockSupport.h */,
+				483E8E461E768DFF007468E5 /* NSTimer+GFBlockSupport.m */,
 			);
 			path = GFBanner;
 			sourceTree = "<group>";
@@ -210,7 +215,7 @@
 		4880D98F1CE5FA9800B394CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Mercy;
 				TargetAttributes = {
 					4880D9961CE5FA9800B394CA = {
@@ -274,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4880D9B71CE5FB0500B394CA /* GFBannerCell.m in Sources */,
+				483E8E471E768DFF007468E5 /* NSTimer+GFBlockSupport.m in Sources */,
 				4880D9BB1CE5FDE100B394CA /* FirstViewController.m in Sources */,
 				4880D9C11CE5FDFB00B394CA /* ThirdViewController.m in Sources */,
 				4880D9A21CE5FA9800B394CA /* ViewController.m in Sources */,
@@ -320,8 +326,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -343,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -364,8 +372,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -381,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

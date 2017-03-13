@@ -14,6 +14,7 @@
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
 
+
 @interface ViewController ()
 
 @property (nonatomic, strong) NSMutableArray *imageArray;
@@ -127,8 +128,6 @@
     
     [_banner changeBannerViewWithImageArray:thirdImageArray];
 }
-
-
 
 
 @end
